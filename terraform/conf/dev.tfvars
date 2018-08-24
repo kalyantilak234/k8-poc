@@ -1,0 +1,13 @@
+region="us-east-1"
+
+aws_ami_id="ami-6871a115"
+ec2_k8_master-instance_type="t2.micro"
+subnet_zone1="subnet-17d06870"
+subnet_zone2="subnet-59e26705"
+aws_security_key_name="devopstrainer2017"
+env="dev"
+ec2_k8_master-instance_vol_size="20"
+vpc="vpc-b19045cb"
+k8_node_security_group="k8-node-sg"
+pub_elb-name="k8-pub-elb"
+k8_elb_security_group="k8-pub-elb-sg"
