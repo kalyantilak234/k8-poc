@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sample-php-mysql
+    ports:
+      - 8080:80
+    links:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_DATABASE: test
+      DB_USERNAME: root
+      DB_PASSWORD: root
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 13306:3306
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: myapp
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
